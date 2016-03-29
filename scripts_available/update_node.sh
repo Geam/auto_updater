@@ -37,6 +37,8 @@ then
         git checkout "$tag"
         ./configure
         make
+    else
+        echo "Already at the last version"
     fi
     git checkout master
 else
