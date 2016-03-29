@@ -24,6 +24,7 @@ then
 else
     for script in `find "$scripts_path" -mindepth 1`
     do
+        echo "### $script ###"
         $script
     done
 fi
