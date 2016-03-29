@@ -13,7 +13,7 @@ fi
 
 if [[ ! -e "$git_repo_path" ]]
 then
-    su -s /bin/sh -c /usr/bin/git clone "$git_url" "$git_repo_path"
+    su -s /bin/sh -c "/usr/bin/git clone $git_url $git_repo_path" "$user"
 fi
 cd "$git_repo_path"
 
