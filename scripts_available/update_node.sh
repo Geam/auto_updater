@@ -6,7 +6,7 @@ git_repo_path="/home/updater/git/node"
 runfile="/tmp/`basename $0`"
 if [[ "${0:0:1}" == "/" ]]
 then
-    full_command=$0
+    full_command="$0"
 else
     full_command="`pwd`/$0"
 fi
@@ -19,7 +19,7 @@ cd "$git_repo_path"
 
 if [[ `id -u` -eq 0 ]]
 then
-    if [[ -e $runfile ]]; then
+    if [[ -e "$runfile" ]]; then
         echo "already start"
         exit 1
     fi
