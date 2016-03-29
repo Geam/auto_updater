@@ -15,9 +15,9 @@ then
     exit 1
 fi
 
-if [[ ! -e "$scripts_relative_path" ]]
+if [[ ! -e "$scripts_path" ]]
 then
-    mkdir -p "$scripts_relative_path"
+    mkdir -p "$scripts_path"
     echo "It appear to be the first time you run this script."
     echo "Put in $scripts_path the scripts or symbolic link to your scripts"
 else
