@@ -1,5 +1,6 @@
 #!/bin/bash
 
+user="updater"
 scripts_relative_path="scripts_enabled"
 
 if [[ "${0:0:1}" == "/" ]]
@@ -17,7 +18,7 @@ fi
 
 if [[ ! -e "$scripts_path" ]]
 then
-    mkdir -p "$scripts_path"
+    su -s /bin/sh -c "mkdir -p $scripts_path" "$user"
     echo "It appear to be the first time you run this script."
     echo "Put in $scripts_path the scripts or symbolic link to your scripts"
 else
